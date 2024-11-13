@@ -27,11 +27,11 @@ Deployed as one single "big block". Self-contained and independent.
 - If product won't need future scaling. Monolothic architecture keeps it simple and cost-effective
 - good choice for smaller programs that need to be quick and cheap. E.g. for start ups: Apps can be put together rapidly with little resources.
 
-## Variant: N-tier
+## Variant: N-tier (3-tier)
 
-3-tiers: Presentation/UI; Businesss Logic; Data
+Variation of a monolith but with more flexibility, separating the application into 3 individual parts: Presentation/UI; Businesss Logic; Database.
 
-Variation of a monolith but with more flexibility: deploy different tiers at different time scales, scale up diff tiers independently from other tiers
+Allows for deploying of different tiers at different time scales, can scale up different tiers independently from other tiers.
 
 ## Diagram
 
