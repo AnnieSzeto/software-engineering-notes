@@ -14,9 +14,9 @@ Deployed as one single "big block". Self-contained and independent.
 ### Negatives
 
 - Lack of elasticity: Restrictive updates, difficult to adopt new tech/languages/frameworks
-- Fault tolerance: High dependence means downtime difficulties.
-- Scalability: Hard to maintain/handle new changes. Whole system needs to be redeployed.
-- Difficult to distribute development due to indivisible database.
+- Fault tolerance: High dependence means downtime difficulties. One thing going wrong would break the whole application.
+- Hard to maintain/handle new changes. Whole system needs to be redeployed for every small change.
+- Scalability: difficult to distribute development due to indivisible database.
   - each team has different agendas (what and when to add)
   - coordination/timing headaches due to shared code/deployment
   - often a mismatch between how various parts wish to be deployed and arranged
@@ -39,15 +39,23 @@ Variation of a monolith but with more flexibility: deploy different tiers at dif
 
 ## Comparison: Micro-Service
 
-Creates a larger appliaction out of multiple modular services—can be time and resource consuming.
+Creates a larger appliaction out of multiple modular services
 
-Coordination layer on top: API gateway, allows modular services to communicate—increased complexity: that which were coordinated in the same memory space/process needs to be coordinated across networks
+- can be time and resource consuming.
 
-Each service is independently deployable, with independent databases and coding—complicated deployment but can scale up infinitely.
+Coordination layer on top: API gateway, allows modular services to communicate
 
-Allows for independent updating, testing, deployment, scaling—testing is complex and can be expensive and time-consuming: all parts must be tested, and then must also test that all parts work together properly.
+- increased complexity: that which were coordinated in the same memory space/process needs to be coordinated across networks, additional resources for the extra level of communication and collaboration.
 
-Example uses:
+Each service is independently deployable, with independent databases and coding. Techonological flexibility, teams can choose to use whatever they want without affecting other parts of the application.
+
+- can scale of infinitely but has complicated deployment, lack of clear owndership, lack of standardisation.
+
+Allows for independent updating, testing, deployment, scaling. Teams can experiment with new features. Easy to isolate faults and bugs individually. Continuous deployment and faster release cycles.
+
+- testing is complex and can be expensive and time-consuming: all parts must be tested, and then must also test that all parts work together properly.
+
+### Example uses:
 
 - Restructuring of legacy systems: allows for incremental optimisation and improvements without too much downtime or resource expenditure
 - Real-time data streaming/processing services: streaming/online banking/ ecommerce etc.
